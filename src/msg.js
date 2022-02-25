@@ -1,9 +1,14 @@
-function msg({ setmsg }) {
+import React, { useEffect } from "react";
+function Msg({ setmsg }) {
+  useEffect(() => {
+    setTimeout(() => {
+      setmsg(false);
+    }, 1000);
+  }, []);
   return (
     <div>
-      <h1>Your response has been recorded</h1>
-      <button onClick={() => setmsg(false)}>Back</button>
+      <h1>Thank you for completing the information</h1>
     </div>
   );
 }
-export default msg;
+export default Msg;
